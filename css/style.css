@@ -222,16 +222,81 @@ first div in the grid  and place it in the grid. */
 
 /* Add your media query here */
 
+@media screen and (min-width: 800px) {
 
   /* Step 9: Write the selector/rule property to style the nav element */
 
+header nav {
+  margin-right: 0;
+  text-align: right;
+}
  
   /* Step 10: Write the selector/rule property to update the .container class */
 
+.container {
+  grid-template-columns: 50px auto 500px auto 50px;
+}
+
+.about {
+  grid-column: 3 / 5;
+  grid-row: 2 / 3;
+}
+
+.method {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.clients {
+  grid-column: 3 / 5;
+  grid-row: 4 / 5;
+}
+
+.contact {
+  grid-column: 2 / 4;
+  grid-row: 5 / 6;
+}
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
 
+.container > :nth-child(1) {
+  grid-column: 1 / 6;
+}
+
+.about-image {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.method-image {
+  grid-column: 3 / 5;
+  grid-row: 3 / 4;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.clients-image {
+  grid-column: 2 / 4;
+  grid-row: 4 / 5;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.contact-image {
+  grid-column: 3 / 5;
+  grid-row: 5 / 6;
+  max-height: 600px;
+  overflow: hidden;
+}
 
 
  /* Step 13:Write the selector/rule property to update the .text-block class */
 
+.text-block {
+  max-height: 250px;
+  overflow: visible;
+}
+
+}
