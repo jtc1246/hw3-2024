@@ -146,12 +146,7 @@ body > div {
 .container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  /* width: 100%; */
   row-gap: 15px;
-}
-
-.container div {
-  /* overflow: hidden; */
 }
 
 
@@ -161,7 +156,6 @@ first div in the grid  and place it in the grid. */
 .container > :nth-child(1) {
   grid-column: 1 / 4;
   background-image: url("../images/header.jpg");
-  background-repeat: no-repeat;
 }
 
 
