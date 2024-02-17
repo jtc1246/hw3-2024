@@ -108,24 +108,61 @@ footer{
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
 
+nav ul li :focus {
+  text-decoration: underline;
+}
 
+nav ul li :hover {
+  text-decoration: underline;
+}
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
 
+.skip a {
+  position: relative;
+  top: -40px;
+}
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
 
+.skip :focus {
+  position: relative;
+  top: 20px;
+}
+
+body > div {
+  height: 0;
+}
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
 
+:focus {
+  border: 2px solid black;
+}
 
 
 /* Step 4: Write selector/rule property to style the container */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  /* width: 100%; */
+  row-gap: 15px;
+}
+
+.container div {
+  /* overflow: hidden; */
+}
 
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
 
+.container > :nth-child(1) {
+  grid-column: 1 / 4;
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+}
 
 
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
@@ -133,9 +170,61 @@ first div in the grid  and place it in the grid. */
 
       /*This will be a lot of rules.... but be strategic and combine seletors*/
 
+.about {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.method {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.clients {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+.contact {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+}
+
+.about-image {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.method-image {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.clients-image {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.contact-image {
+  grid-column: 1 / 4;
+  grid-row: 5 / 6;
+  max-height: 600px;
+  overflow: hidden;
+}
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 
+.text-block {
+  text-align: center;
+  height: min-content;
+  align-self: center;
+}
 
 /* Add your media query here */
 
